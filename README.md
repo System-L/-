@@ -1,2 +1,4 @@
-# early-clock
-基于Auto.js的早起打卡项目
+# AutoJS
+1.早起打卡项目
+
+2.和我信金币收取
