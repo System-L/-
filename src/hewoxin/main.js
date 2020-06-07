@@ -24,8 +24,8 @@ ui.layout(
         </appbar>
         <Switch id="autoService" text="无障碍服务" checked="{{auto.service != null}}" padding="8 8 8 8" textSize="15sp" />
         <frame height="200" gravity="center">
-            <text text="配置信息：" textSize="20" />
-            <horizontal gravity="center"> //水平布局
+            <text text="  配置信息：" textSize="20" />
+            <horizontal gravity="center">
                 <text text="请输入捡币次数(默认为5)：" />
                 <input id="timesText" inputType="number" w="60" />
             </horizontal>
@@ -41,10 +41,8 @@ ui.autoService.on("check", function (checked) {
         app.startActivity({
             action: "android.settings.ACCESSIBILITY_SETTINGS"
         });
-
-        auto.service = true
+        auto.service = true;
     }
-
     if (!checked && auto.service != null) {
         //关闭自己service的方法，在设置界面可以看到辅助功能状态被关闭
         auto.service.disableSelf();
