@@ -1,3 +1,6 @@
+var screen_width = device.width
+var screen_height = device.height //设置屏幕的高度，像素值
+
 device.wakeUp();
 app.launchApp("京东金融")
 toastLog("正在打开京东金融...")
