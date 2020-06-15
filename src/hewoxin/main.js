@@ -5,15 +5,6 @@ var screen_height = device.height;
 var x1, x2, y1, y2;
 //定义获取金币轮数
 var times = 5;
-//定义用户信息位置
-// var users = [
-//     {x1: 52, y1: 1067, x2: 307, y2: 1322},
-//     {x1: 412, y1: 1067, x2: 667, y2: 1322},
-//     {x1: 722, y1: 1067, x2: 1027, y2: 1322},
-//     {x1: 52, y1: 1367, x2: 307, y2: 1622},
-//     {x1: 412, y1: 1367, x2: 667, y2: 1622},
-//     {x1: 722, y1: 1367, x2: 1027, y2: 1622}
-// ]
 
 device.wakeUp()
 
@@ -146,11 +137,3 @@ function getGolds() {
         }
     })
 }
-
-// //遍历点击
-// function getGolds(){
-//     for(var i = 0; i<users.length; i++){
-//         click(users[i].x1 +5, users[i].y2 -8)
-//         sleep(1000)
-//     }
-// }
