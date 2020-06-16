@@ -1,25 +1,23 @@
-/**
- * 美团-免费领水果
- */
+//美团-免费领水果
 //常量定义
 var screen_width = device.width;
 var screen_height = device.height;
-//地鼠位置 设置
-var ys = new Array(770, 1090, 1412, 1730);
-var xs = new Array(230, 533, 840);
+//地鼠位置
+var xs = new Array(230, 535, 840);
+var ys = new Array(840, 1115, 1470, 1745)
 //地鼠颜色
-var mouse1Color = "#dad7f6";
-var mouse2Color = "#f7f0d6";
+var mouseColor1 = "#dad7f6";
+var mouseColor2 = "#f7f0d6";
+var mouseColor3 = "#d73532";
 
-// device.wakeUp()
+// device.wakeUp();
 
-// app.launchApp("美团")
+// app.launchApp("美团");
 
-// //存在广告 时间等待
 // sleep(5000)
 
-// if (!textContains("扫一扫").exists()) {
-//     toastLog("【扫一扫】没找到,任务结束")
+// if (!textContains("实时公交").exists()) {
+//     toastLog("【实时公交】没找到,任务结束")
 //     exit()
 // }
 
@@ -27,37 +25,32 @@ var mouse2Color = "#f7f0d6";
 
 // sleep(3000)
 
-//签到
-// click( screen_width/10, screen_height/7 )
+//领水滴-根据屏幕长度百分比点击
+// press( screen_width / 5, screen_height*0.88, 1);
 
-// sleep(1500)
+// sleep(1000)
 
-// click( screen_width/2, screen_height*0.75 )
-
-// sleep(1500)
-
-// click( screen_width/2, screen_height*0.75 )
-
-// sleep(2000)
+//1.签到
+// press( screen_width / 5, screen_height*0.35, 1);
 
 if (!requestScreenCapture()) {
     toast("请求截图失败");
-    exit();
-}
-for (; ;) {
-    img = captureScreen();
-    getPreMouse(img);
+    exit()
 }
 
-function getPreMouse(img) {
+for (; ;) {
+    img = images.captureScreen();
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 4; j++) {
-            if (images.detectsColor(img, mouse1Color, xs[i], ys[j]) || images.detectsColor(img, mouse2Color, xs[i], ys[j])) {
-                click(xs[i], ys[j])
-                click(xs[i], ys[j])
+            if (images.detectsColor(img, mouseColor1, xs[i], ys[j])
+            || images.detectsColor(img, mouseColor2, xs[i], ys[j])
+            || images.detectsColor(img, mouseColor3, xs[i], ys[j])) {
+                press(xs[i], ys[j], 1)
+                press(xs[i], ys[j], 1)
+                press(xs[i], ys[j], 1)
             }
         }
     }
 }
 
-// toastLog("【美团-免费领水果】,任务结束")
+toastLog("【美团-免费领水果】任务执行完毕");
