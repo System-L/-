@@ -46,11 +46,6 @@ click(x1 + 5, y2 - 8)
 
 sleep(5000)
 
-if (!textContains("呗壳").exists()) {
-    toastLog("【呗壳】没找到,任务结束")
-    exit()
-}
-
 var 呗壳 = text("呗壳").findOne()
 var 呗壳_bound = 呗壳.bounds()
 x1 = 呗壳_bound.left

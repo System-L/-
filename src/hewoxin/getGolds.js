@@ -1,3 +1,5 @@
+//和我信-捡币小工
+//ui 引用
 "ui";
 //常量定义
 var screen_width = device.width;

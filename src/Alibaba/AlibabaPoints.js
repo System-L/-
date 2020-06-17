@@ -1,4 +1,4 @@
-//支付宝积分获取
+//支付宝-积分获取
 //常量定义
 var screen_width = device.width;
 var screen_height = device.height;
@@ -63,3 +63,5 @@ while(1){
     click(x1 + 5, y2 - 8)
 
 }
+
+toastLog("【支付宝-积分获取】任务完成")
